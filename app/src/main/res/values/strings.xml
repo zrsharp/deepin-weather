@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">deepinWeather</string>
+    <string name="return_btn_text">返回</string>
+</resources>
