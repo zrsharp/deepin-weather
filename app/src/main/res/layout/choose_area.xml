@@ -19,12 +19,13 @@
 
         <Button
             android:id="@+id/back_button"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_width="45dp"
+            android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:background="@drawable/back_button_background"
+            android:textColor="#ffffff"
             android:text="@string/return_btn_text" />
     </RelativeLayout>
 

@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">deepinWeather</string>
+    <string name="app_name">深度天气</string>
     <string name="return_btn_text">返回</string>
+    <string name="air_quility">空气质量</string>
 </resources>

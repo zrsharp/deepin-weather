@@ -3,6 +3,8 @@ package com.zero.deepinweather.util;
 import android.text.TextUtils;
 
 
+import com.google.gson.Gson;
+import com.zero.deepinweather.model.resultJsonModel.Weather;
 import com.zero.deepinweather.pojo.City;
 import com.zero.deepinweather.pojo.County;
 import com.zero.deepinweather.pojo.Province;
@@ -79,5 +81,17 @@ public class Utility {
             }
         }
         return false;
+    }
+
+    public static Weather handleWeatherResponse(String response) {
+        try {
+            JSONObject jsonObject = new JSONObject(response);
+            JSONArray jsonArray = jsonObject.getJSONArray("HeWeather");
+            String weatherContent = jsonArray.getJSONObject(0).toString();
+            return new Gson().fromJson(weatherContent, Weather.class);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
